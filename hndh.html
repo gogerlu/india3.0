@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Shake</title>
+<style>
+  @keyframes shake {
+    0% { transform: translate(-5px, -5px); }
+    25% { transform: translate(5px, 5px); }
+    50% { transform: translate(-5px, -5px); }
+    75% { transform: translate(5px, 5px); }
+    100% { transform: translate(-5px, -5px); }
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(100%); /* 初始位置在屏幕右侧外部 */
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .shaking-text {
+    animation: shake 0.9s infinite;
+  }
+
+  .image-container {
+    position: absolute;
+    top: 200px;
+    right: 100px;
+  }
+
+  .image-container img {
+    animation: slideIn 1s ease forwards;
+  }
+</style>
+</head>
+<body>
+<h1>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Indihome</h1>
+<h1 style="color:red;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Paket Phoenis</h1>
+<section>
+  <p class="shaking-text" style="font-size: 24px;">
+    <span style="color: red;">Paket Phoenis&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;280.000<br></span>
+    <span style="color: black;">10mbs</span>
+    <br>
+    <span style="color: red;">Paket Phoenis&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;345.000<br></span>
+    <span style="color: black;">20mbs</span>
+    <br>
+    <span style="color: red;">Paket Phoenis&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;575.000<br></span>
+    <span style="color: black;">50mbs</span>
+    <br>
+    <span style="color: red;">Paket Phoenis&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;935.000<br></span>
+    <span style="color: black;">100mbs</span>
+  </p>
+  <div class="image-container">
+    <img src="印尼仔.png" width="700">
+  </div>
+  <button onclick="playAudio()">Play Music</button>
+  <audio id="background-music">
+    <source src="utomp3.com - Paket Pheonix Ad Except I Remade It To Be Higher Quality.mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    function playAudio() {
+      var audio = document.getElementById("background-music");
+      audio.volume = 0.5;
+      audio.play();
+    }
+  </script>
+</section>
+</body>
+</html>
